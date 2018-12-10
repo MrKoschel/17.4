@@ -18,7 +18,7 @@ process.stdin.on('readable', function () {
                 process.stdout.write("lang is " + process.env.LANG + "\n")
                 break;
             case '/getOSinfo':
-                getOSinfo();
+                OSinfo.print();
                 break;
             default:
                 process.stderr.write('Wrong instruction!\n');

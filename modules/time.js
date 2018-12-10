@@ -2,11 +2,10 @@ process.stdin.setEncoding('utf-8');
 var os = require('os');
 
     var uptime = os.uptime();
-    function uptimeCalc(d) {
-        d = uptime(d);
-    var h = Math.floor(d / 3600);
-    var m = Math.floor(d % 3600 / 60);
-    var s = Math.floor(d % 3600 % 60);
+    function uptimeCalc() {
+    var h = Math.floor(uptime / 3600);
+    var m = Math.floor(uptime % 3600 / 60);
+    var s = Math.floor(uptime % 3600 % 60);
 
     var hDisplay = h > 0 ? h + (h == 1 ? " hour, " : " hours, ") : "";
     var mDisplay = m > 0 ? m + (m == 1 ? " minute, " : " minutes, ") : "";
@@ -14,4 +13,4 @@ var os = require('os');
     return hDisplay + mDisplay + sDisplay; 
     }
 
-exports.print = timeCalc; 
+exports.uptimeCalc = uptimeCalc; 

@@ -1,8 +1,6 @@
 process.stdin.setEncoding('utf-8');
-var os = require('os');
 
-    var uptime = os.uptime();
-    function uptimeCalc() {
+    function uptimeCalc(uptime) {
     var h = Math.floor(uptime / 3600);
     var m = Math.floor(uptime % 3600 / 60);
     var s = Math.floor(uptime % 3600 % 60);
